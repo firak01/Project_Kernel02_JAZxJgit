@@ -844,7 +844,7 @@ public class JgitStarterHTTPS<T> extends AbstractJgitStarterRemote<T> implements
 	        String sBranch = this.getRepositoryBranch();
 	        
 	        //FÜR HTTPS HIER AUCH CREDENTIALS BEREITSTELLEN
-	        JgitUtilZZZ.fetchIgnoreNothingToFetch(objFileDir, sRepositoryRemoteTotal, sBranch);
+	        JgitUtilZZZ.fetchIgnoreNothingToFetch(objFileDir, credentialsProvider, sRepositoryRemoteTotal, sBranch);
 		    System.out.println(("FETCH DONE"));
 		    
 		    git.close();
