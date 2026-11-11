@@ -1474,6 +1474,27 @@ Repository existingRepo = new FileRepositoryBuilder()
 	}	
 	
 	public static FetchResult fetchIgnoreNothingToFetch(
+			File objFileDir,	        
+	        CredentialsProvider credentialsProvider,
+	        String sBranchIn
+	) throws ExceptionZZZ {
+		FetchResult objReturn = null;
+		main:{
+		    try {
+		    	Git git4Fetch = Git.open(objFileDir); 
+				System.out.println("Git-Repository 4 Fetch repository opened.");
+				
+				objReturn = fetchIgnoreNothingToFetch(git4Fetch, credentialsProvider, sBranchIn);
+		    }catch (IOException ioe) {
+				ExceptionZZZ ez = new ExceptionZZZ(ioe);
+				throw ez;		    
+			} 
+		}//end main:
+		 return objReturn;
+	}
+	
+	
+	public static FetchResult fetchIgnoreNothingToFetch(
 	        Git git,	        
 	        CredentialsProvider credentialsProvider,
 	        String sBranchIn
