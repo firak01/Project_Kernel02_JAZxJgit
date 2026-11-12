@@ -10,7 +10,7 @@ import basic.zBasic.ReflectCodeZZZ;
 import basic.zBasic.util.datatype.dateTime.DateTimeZZZ;
 import basic.zBasic.util.datatype.string.StringZZZ;
 import basic.zBasic.util.file.FileEasyZZZ;
-import basic.zBasic.util.file.txt.stream.FileTextReplacerZZZ;
+import basic.zBasic.util.file.txt.stream.FileTextLineReplacerZZZ;
 import basic.zBasic.util.machine.EnvironmentZZZ;
 import basic.zBasic.util.system.Syso;
 import basic.zWin32.com.wmi.WMIZZZ;
@@ -161,7 +161,7 @@ public class TestHelper implements IConstantZZZ, ITestHelperConstant {
 			//FileTextWriterZZZ objWriter = new FileTextWriterZZZ(sFilePathTotal);
 			//objWriter.writeLine(sLine);
 				
-			FileTextReplacerZZZ objReplacer = new FileTextReplacerZZZ(sFilePathTotal);
+			FileTextLineReplacerZZZ objReplacer = new FileTextLineReplacerZZZ(sFilePathTotal);
 			objReplacer.replaceAndSave(0, sLine);
 						
 			bReturn = true;
